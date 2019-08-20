@@ -1,0 +1,4 @@
+# Instructions: https://github.com/OCA/maintainer-quality-tools/blob/master/sample_files/oca_dependencies.txt
+website https://github.com/OCA/website.git
+commission https://github.com/OCA/commission.git
+rma https://github.com/OCA/rma.git

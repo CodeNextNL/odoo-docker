@@ -1,0 +1,4 @@
+dpkg
+gdebi-core
+git
+sudo
