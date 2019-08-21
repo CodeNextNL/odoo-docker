@@ -204,7 +204,7 @@ function odoo {
     if [ ! -e $1 ]; then
         echo $log_src[`date +%F.%H:%M:%S`]' ...with additional args:' $*
     fi
-    python3 ./usr/bin/odoo -c "$odoo_conf_file" $*
+    python3 /opt/odoo/odoo-bin -c "$odoo_conf_file" $*
         #"/opt/odoo/sources/odoo/$SERVICE_BIN" -c "$odoo_conf_file" $*
     # _custom_start
     

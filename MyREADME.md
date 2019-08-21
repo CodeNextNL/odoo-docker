@@ -10,3 +10,9 @@ READ! openworx odoo docker setup -- https://www.openworx.nl/blog/blog-1/post/odo
 
 Important steps!
 - entrypoint.sh | bin/boot must be chmod +x before Docker build
+
+Docker images good-to-know:
+- Remove none-tag Docker images: docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+- Clean up Docker volumes: docker volume rm $(docker volume ls -qf dangling=true)
+- tag Docker image: docker tag imagebuildinginprocess wjriedstra/odoo:12.0
+- push Docker image: docker push wjriedstra/odoo:12.0

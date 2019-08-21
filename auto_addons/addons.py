@@ -12,7 +12,7 @@ except ImportError:
     import urllib.parse as urlparse
 
 EXTRA_ADDONS_PATH = '/opt/odoo/additional_addons/'
-ODOO_ADDONS_PATH = '/usr/lib/python3/dist-packages/odoo/addons'
+ODOO_ADDONS_PATH = '/opt/odoo/addons'
 ODOO_CONF = '/opt/odoo/etc/odoo.conf'
 DEFAULT_SCHEME = 'https'
 DEFAULT_GIT_HOSTING_SERVICE = 'github.com'
