@@ -6,12 +6,17 @@ services:
     ports:
       - 8071:8069
     environment:
-      - ODOO_DB_HOST=False
+      - ODOO_DB_HOST=localhost
+      - ODOO_DB_PORT=5432
       - ODOO_DB_USER=odoo
+      - ODOO_DB_PASSWORD=odoo
       - ODOO_ADMIN_PASSWD=strong_odoo_master_password
     volumes:
       - odoo-data:/var/lib/odoo
+    extra_hosts:
+      - "host.docker.internal:[ip-address]"
     restart: always
+    network_mode: "host"
 volumes:
   odoo-data:
     driver: local

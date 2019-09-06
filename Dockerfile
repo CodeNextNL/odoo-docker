@@ -117,6 +117,7 @@ RUN from=$( awk '/^## Usage/{ print NR; exit }' /usr/share/man/man.txt ) && \
 RUN usermod -aG sudo odoo
 ENV ODOO_RC /opt/odoo/etc/odoo.conf
 ADD auto_addons/oca_dependencies.txt /opt/odoo/additional_addons
+RUN ip -4 route list match 0/0 | awk '{print $3 "host.docker.internal"}' >> /etc/hosts
 
 # Expose Odoo services
 EXPOSE 8069 8071
