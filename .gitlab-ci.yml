@@ -11,5 +11,5 @@ deploy:
     - ssh-add ~/.ssh/id_rsa
     - ssh-keyscan -H $DEPLOYMENT_SERVER_IP >> ~/.ssh/known_hosts
   script:
-    - scp -r ./* $DEPLOYMENT_SERVER_USER@$DEPLOYMENT_SERVER_IP:~/home/
+    - scp -r ./* $DEPLOYMENT_SERVER_USER@$DEPLOYMENT_SERVER_IP:~/.
     - ssh $DEPLOYMENT_SERVER_USER@$DEPLOYMENT_SERVER_IP "docker-compose up -d"
