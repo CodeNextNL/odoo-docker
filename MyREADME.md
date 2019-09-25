@@ -1,3 +1,5 @@
+# Odoo Docker
+
 Setup Odoo Docker Development Environment
 https://medium.com/@reedrehg/easier-odoo-development-278bbaab38c8
 
@@ -15,5 +17,6 @@ Important steps!
 Docker images good-to-know:
 - Remove none-tag Docker images: docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 - Clean up Docker volumes: docker volume rm $(docker volume ls -qf dangling=true)
+- build Docker: docker build . wjriedstra/odoo:12.0-dev
 - tag Docker image: docker tag imagebuildinginprocess wjriedstra/odoo:12.0
 - push Docker image: docker push wjriedstra/odoo:12.0
