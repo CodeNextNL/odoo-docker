@@ -8,8 +8,10 @@ deploy:
     - echo "$DEPLOY_SERVER_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
     - chmod 600 ~/.ssh/id_rsa
     - eval "$(ssh-agent -s)"
-    - ssh-add ~/.ssh/id_rsa
+    - ssh-add ~/.ssh/id_rsax
     - ssh-keyscan -H $DEPLOYMENT_SERVER_IP >> ~/.ssh/known_hosts
+    - chmod +x ./setup_env.sh
+    - ./setup_env.sh
   script:
-    - scp -r ./* $SSH_USER@$DEPLOYMENT_SERVER_IP:~/home/$DEPLOYMENT_SERVER_USER/
-    - ssh $SSH_USER@$DEPLOYMENT_SERVER_IP:~/home/DEPLOYMENT_SERVER_USER/ "docker-compose up -d"
+    - scp -r ./* $SSH_USER@$DEPLOYMENT_SERVER_IP:~/home/$DEPLOYMENT_SERVER_USER/.
+    - ssh $SSH_USER@$DEPLOYMENT_SERVER_IP:~/home/DEPLOYMENT_SERVER_USER/ "set -a && source odoo-variables.env && docker-compose up -d"
