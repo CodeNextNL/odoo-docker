@@ -1,6 +1,8 @@
 FROM debian:stretch
 LABEL maintainer="codeNext <info@codenext.nl>"
 
+# todo: FROM debian:stretch change to liter versions
+
 ENV PYTHON_BIN=python3 \
     SERVICE_BIN=odoo-bin \
     ODOO_VERSION=12.0 \
