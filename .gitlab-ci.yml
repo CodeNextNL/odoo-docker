@@ -13,5 +13,6 @@ deploy:
     - chmod +x ./setup_env.sh
     - ./setup_env.sh
   script:
-    - scp -r ./* $SSH_USER@$DEPLOYMENT_SERVER_IP:~/home/$DEPLOYMENT_SERVER_USER/.
-    - ssh $SSH_USER@$DEPLOYMENT_SERVER_IP:~/home/DEPLOYMENT_SERVER_USER/ "set -a && source odoo-variables.env && docker-compose up -d"
+    - scp -r ./* $SSH_USER@$DEPLOYMENT_SERVER_IP:/home/$DEPLOYMENT_SERVER_USER
+    - ssh -T $SSH_USER@$DEPLOYMENT_SERVER_IP 'bash -s' < start_docker.sh $DEPLOYMENT_SERVER_USER
+    #- ssh -t $SSH_USER@$DEPLOYMENT_SERVER_IP "cd home && cd $DEPLOYMENT_SERVER_USER && set -a && source odoo-variables.env && docker-compose up -d"
