@@ -3,6 +3,8 @@ services:
   odoo:
     image: wjriedstra/odoo:12.0-dev
     command: odoo
+#    env_file:
+#      - odoo-variables.env
     ports:
       - "80:${ODOO_XMLRPC_PORT}"
       - "443:${ODOO_LONGPOLLING_PORT}"
@@ -13,8 +15,6 @@ services:
       - odoo-data:/var/lib/odoo
     restart: always
     network_mode: "host"
-    env_file:
-      - odoo-variables.env
 volumes:
   odoo-data:
     driver: local
