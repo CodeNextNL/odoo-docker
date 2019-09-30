@@ -4,4 +4,4 @@
   echo "ODOO_ADMIN_PASSWD=$ODOO_ADMIN_PASSWD"
   echo "ODOO_XMLRPC_PORT=$ODOO_XMLRPC_PORT"
   echo "ODOO_LONGPOLLING_PORT=$ODOO_LONGPOLLING_PORT"
-} >> "odoo-variables.env"
+} >> ".env"
