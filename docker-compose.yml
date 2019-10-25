@@ -9,12 +9,14 @@ services:
     environment:
       - ODOO_DB_HOST=localhost
       - ODOO_DB_USER=odoo
+      - ODOO_DB_PASSWORD
+      - ODOO_ADMIN_PASSWD
+      - ODOO_XMLRPC_PORT
+      - ODOO_LONGPOLLING_PORT
     volumes:
       - odoo-data:/var/lib/odoo
     restart: always
     network_mode: "host"
-    env_file:
-      - odoo-variables.env
 volumes:
   odoo-data:
     driver: local
