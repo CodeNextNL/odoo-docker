@@ -3,3 +3,4 @@ website https://github.com/OCA/website.git
 commission https://github.com/OCA/commission.git
 rma https://github.com/OCA/rma.git
 saas-addons https://github.com/it-projects-llc/saas-addons.git
+product-attribute https://github.com/OCA/product-attribute.git
