@@ -1,0 +1,21 @@
+version: '3'
+services:  
+  postgres:
+    image: postgres:10.0
+    environment:
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=odoo
+    restart: always
+  odoo:
+    image: wjriedstra/odoo:12.0-dev
+    command: odoo
+    depends_on:
+      - postgres
+    ports:
+      - 8071:8069
+    environment:
+      - ODOO_ADMIN_PASSWD=admin_password
+      - ODOO_DB_USER=odoo
+      - ODOO_DB_HOST=postgres
+      - ODOO_DB_password=odoo
+    restart: always
