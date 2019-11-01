@@ -6,8 +6,6 @@ https://medium.com/@reedrehg/easier-odoo-development-278bbaab38c8
 GitHub Repositories inside docker-compose
 https://odoo-community.org/blog/the-oca-blog-1/post/how-to-install-oca-modules-79
 
-READ! Git Aggregator -- https://hub.docker.com/r/tecnativa/odoo-base/#git-aggregator
-READ! Scaffolding -- https://github.com/Tecnativa/doodba
 READ! openworx odoo docker setup -- https://www.openworx.nl/blog/blog-1/post/odoo-docker-6
 READ! -- https://github.com/it-projects-llc/install-odoo/blob/12.0/Dockerfile
 
