@@ -18,3 +18,6 @@ Docker images good-to-know:
 - build Docker: docker build . wjriedstra/odoo:12.0-dev
 - tag Docker image: docker tag imagebuildinginprocess wjriedstra/odoo:12.0
 - push Docker image: docker push wjriedstra/odoo:12.0
+
+### Todo
+- [ ] docker-compose-local: extra environment variables on the fly

@@ -19,3 +19,5 @@ services:
       - ODOO_DB_HOST=postgres
       - ODOO_DB_password=odoo
     restart: always
+    volumes:
+      - ./auto_addons/oca_dependencies.txt:/opt/odoo/additional_addons/oca_dependencies.txt
