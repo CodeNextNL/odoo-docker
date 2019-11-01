@@ -15,6 +15,7 @@ services:
       - ODOO_LONGPOLLING_PORT
     volumes:
       - odoo-data:/var/lib/odoo
+      - ./auto_addons/oca_dependencies.txt:/opt/odoo/additional_addons/oca_dependencies.txt
     restart: always
     network_mode: "host"
 volumes:
